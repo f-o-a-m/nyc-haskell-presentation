@@ -39,9 +39,7 @@ Takeaway: Lots of *roots*
 
 Blocks carry an index into a storage tree, called a *state root*
 <center>
-<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/bc-tree1.png" height="450">
-</a>
 </center>
 
 ** <sup>Images shamelessly adapted from Git Internals by Scott Chacon</sup>
@@ -52,9 +50,7 @@ Blocks carry an index into a storage tree, called a *state root*
 
 Block progression gives a series of indices into storage
 <center>
-<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/bc-tree2.png" height="450">
-</a>
 </center>
 
 ---
@@ -65,9 +61,7 @@ Block progression gives a series of indices into storage
 - want to access history (e.g. indexing, auditing, replaying)
 - want to submit transactions to update this storage
 <center>
-<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/bc-tree3.png" height="450">
-</a>
 </center>
 
 ---
@@ -77,9 +71,7 @@ Block progression gives a series of indices into storage
 - Outside world notified via subscriptions to contract's transfer topic.
 
 <center>
-<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/evm-logs.png" height="450">
-</a>
 </center>
 
 ---
