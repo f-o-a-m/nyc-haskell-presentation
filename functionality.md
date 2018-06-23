@@ -8,7 +8,7 @@
 
 - Node's primary concern is block production, propogation, and verification
 - Internal storage model is cryptographic (Merkle) trees
-- Query performance not a concern
+- Query performance not a concern, better to use production grade databases where applicable (e.g. Postgres, Elasticsearch)
 
 ---
 
@@ -61,8 +61,9 @@ Block progression gives a series of indices into storage
 
 ## Ethereum Progression Graphic
 
-- want to stream relevant application updates
+- want to stream relevant application updates, *events*
 - want to access history (e.g. indexing, auditing, replaying)
+- want to submit transactions to update this storage
 <center>
 <a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/bc-tree3.png" height="450">
@@ -70,3 +71,4 @@ Block progression gives a series of indices into storage
 </center>
 
 ---
+
