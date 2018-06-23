@@ -35,7 +35,7 @@ Takeaway: Lots of *roots*
 
 ---
 
-## Ethereum Progression Graphic
+## Ethereum Progression
 
 Blocks carry an index into a storage tree, called a *state root*
 <center>
@@ -48,7 +48,7 @@ Blocks carry an index into a storage tree, called a *state root*
 
 ---
 
-## Ethereum Progression Graphic
+## Ethereum Progression
 
 Block progression gives a series of indices into storage
 <center>
@@ -59,7 +59,7 @@ Block progression gives a series of indices into storage
 
 ---
 
-## Ethereum Progression Graphic
+## Ethereum Progression
 
 - want to stream relevant application updates, *events*
 - want to access history (e.g. indexing, auditing, replaying)
@@ -67,6 +67,18 @@ Block progression gives a series of indices into storage
 <center>
 <a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
 <img src="images/bc-tree3.png" height="450">
+</a>
+</center>
+
+---
+
+## What Are These *Event Logs* Precisely?
+- When Alice transfers Bob a token, balances in contract storage change but this act of exchange is not stored in contract.
+- Outside world notified via subscriptions to contract's transfer topic.
+
+<center>
+<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png">
+<img src="images/evm-logs.png" height="450">
 </a>
 </center>
 
