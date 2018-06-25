@@ -16,10 +16,13 @@
 - Originally developed at Facebook, led by Simon Marlow
 - Kind of like a scheduler for monadic computation
   - input "sequential", IO bound, monadic computation
-  - will optimally rewrite to parallalelize (eh, basically)
+  - will optimally<sup>1</sup> rewrite to parallalelize
   - sophisticated caching
 - Really great for time indexed databases where you really don't want to do more work than you have to.
 
+
+<sub>[1] Not optimal in general, that would require case-speceific information.</sub>
+  
 ---
 
 ## Example Computation
@@ -60,14 +63,14 @@ getRichestNeighbors
      )
   => BlockNumber
   -> Address
-  -> m [Address]
+  -> m [(Address, UIntN 256)]
 getRichestNeighbors userAddress = do
-  neighbors <- getTraders userAddress
-  pairs <- forM neighbors $ \n -> do
-    bal <- balanceOf bn n
-    pure (n, bal)
+  traders <- getTraders userAddress
+  pairs <- forM traders $ \trader -> do
+    bal <- balanceOf bn trader
+    pure (trader, bal)
   let pairs' = filter ((> 0) . snd) pairs
-  pure . map fst . take 10 . sortOn (snd . Down) $ pairs'
+  pure . take 10 . sortOn (snd . Down) $ pairs'
 ```
 
 ---
@@ -88,19 +91,19 @@ getRichestNeighborsK
   => BlockNumber
   -> Int
   -> Address
-  -> m [Address]
+  -> m [(Address, UIntN 256)]
 getRichestNeighborsK bn k userAddress = do
   neighbors <- go bn k userAddress
   pairs <- forM neighbors $ \n -> do
     bal <- balanceOf bn n
     pure (n, bal)
-  pure . map fst . take 10 . sortOn (snd . Down) $ pairs 
+  pure . take 10 . sortOn (snd . Down) $ pairs 
   where
     go _ 0 _ = pure []
     go bn k userAddress = do
-      neighbors <- getTraders userAddress
-      neighbors' <- filterM (fmap (> 0) . balanceOf bn) others  
-      concat <$> mapM (getNeighborsK bn (k-1)) neighbors'
+      ns <- getTraders userAddress
+      ns' <- filterM (fmap (> 0) . balanceOf bn) ns  
+      concat <$> mapM (go bn (k-1)) ns'
 ```
 
 ---
@@ -116,7 +119,7 @@ getRichestNeighborsK bn k userAddress = do
 - Run computation in `State` monad holding `MVar` with maps 
   - `traders :: Map Address [Address]`
   - `balances :: Map Address (UIntN 256)` 
-- User combination of `par` strategies and `async`/`forkM`.
+- Use combination of `par` strategies and `async`/`wait`.
 
 Building custom concurrency like this is tedious, fragile, and not always composible.
 
