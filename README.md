@@ -1,10 +1,10 @@
-# mayday-presentation
+# nyc-haskell-presentation
 
-[![Build status](https://travis-ci.org/f-o-a-m/mayday-presentation.svg?branch=master)](https://travis-ci.org/f-o-a-m/mayday-presentation?branch=master)
+[![Build status](https://travis-ci.org/f-o-a-m/nyc-haskell-presentation.svg?branch=master)](https://travis-ci.org/f-o-a-m/nyc-haskell-presentation?branch=master)
 
 ## View the presentation
 
-[https://f-o-a-m.github.io/mayday-presentation/](https://f-o-a-m.github.io/mayday-presentation/)
+[https://f-o-a-m.github.io/nyc-haskell-presentation/](https://f-o-a-m.github.io/nyc-haskell-presentation/)
 
 ## How to build
 
