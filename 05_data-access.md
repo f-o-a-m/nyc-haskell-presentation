@@ -1,4 +1,5 @@
 ---
+
 # Querying Data
 
 ---
@@ -143,6 +144,7 @@ You might be able to do better with custom concurrency controls, but unlikely. A
 
 
 ---
+
 ## Haxl Scheduler Diagram
 
 Not an AST!
@@ -151,7 +153,4 @@ sequential dependencies are marked with `(>>=)` and syncrhonization points with 
 
 <img src="images/haxl.png" height="450">
 
-
 ---
-describe sequentially of (>>=) :: m a -> (a -> m b) -> m b
-vs (<*>)

@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Martin Allen, FOAM">
-  <meta name="dcterms.date" content="2018-06-27">
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -102,6 +100,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section class="slide level2">
 
 </section>
+<section><section id="the-state-of-haskell-in-ethereum" class="title-slide slide level1"><h1>The State of Haskell in Ethereum</h1></section><section class="slide level2">
+
+</section></section>
 <section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="blockchain-vs-cryptocurrency" class="slide level2">
 <h2>Blockchain vs Cryptocurrency</h2>
 <ul>
@@ -145,8 +146,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Geospatial Data – <a href="https://beta.foam.space/app">FOAM</a></li>
 </ul></li>
 </ul>
-</section><section class="slide level2">
-
 </section></section>
 <section><section id="data-access-and-streaming" class="title-slide slide level1"><h1>Data Access and Streaming</h1></section><section id="the-problem" class="slide level2">
 <h2>The Problem</h2>
@@ -363,17 +362,10 @@ Block progression gives a series of indices into storage
 <a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="ot">-&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">ReaderT</span> <span class="dt">Change</span> <span class="dt">Web3</span> <span class="dt">EventAction</span>)</a>
 <a class="sourceLine" id="cb9-9" data-line-number="9">  <span class="ot">-&gt;</span> <span class="dt">Web3</span> ()</a></code></pre></div>
 <p>Ironically, I usually use this to feed a <code>Conduit</code> in all the data processing work that I do.</p>
-<table style="width:8%;">
-<colgroup>
-<col style="width: 8%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td># Querying Data</td>
-</tr>
-</tbody>
-</table>
-</section><section id="haxl-interlude" class="slide level2">
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="querying-data" class="title-slide slide level1"><h1>Querying Data</h1></section><section id="haxl-interlude" class="slide level2">
 <h2>Haxl Interlude</h2>
 <center>
 <img src="images/free-dsl.png" height="450" width="350">
@@ -481,7 +473,12 @@ Block progression gives a series of indices into storage
 <p>The analogy is: - <code>Memory Management</code> is to <code>Garbage Collection</code> as <code>Concurrency</code> is to <code>Haxl</code><sup>1</sup></p>
 <p>You might be able to do better with custom concurrency controls, but unlikely. Also, it’s probably not the actual problem you’re trying to solve at the moment.</p>
 <p><sub>[1] Simon Marlow <a href="https://www.youtube.com/watch?v=sT6VJkkhy0o">StrangeLoop 2017</a> </sub></p>
-<p>describe sequentially of (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b vs (&lt;*&gt;)</p>
+</section><section id="haxl-scheduler-diagram" class="slide level2">
+<h2>Haxl Scheduler Diagram</h2>
+<p>Not an AST! This represents a dependency graph where sequential dependencies are marked with <code>(&gt;&gt;=)</code> and syncrhonization points with <code>(&lt;*&gt;)</code>.</p>
+<p><img src="images/haxl.png" height="450"></p>
+</section><section class="slide level2">
+
 </section></section>
     </div>
   </div>

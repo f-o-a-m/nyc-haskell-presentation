@@ -1,10 +1,9 @@
 ---
-# The State of Haskell in Ethereum
 
+# The State of Haskell in Ethereum
 
 author: Martin Allen, FOAM
 date: June 27, 2018
----
 
 ---
 
@@ -48,5 +47,5 @@ date: June 27, 2018
 - Digital Registries
   - Ad Tech -- [ad chain](https://publisher.adchain.com/domains)
   - Geospatial Data -- [FOAM](https://beta.foam.space/app)
- 
+
 ---
