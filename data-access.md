@@ -21,7 +21,7 @@
 - Really great for time indexed databases where you really don't want to do more work than you have to.
 
 
-<sub>[1] Not optimal in general, that would require case-speceific information.</sub>
+<sub>[1] Not actually optimal (couldn't be), uses heuristics to avoid slow compile times</sub>
   
 ---
 
@@ -101,9 +101,9 @@ getRichestNeighborsK bn k userAddress = do
   where
     go _ 0 _ = pure []
     go bn k userAddress = do
-      ns <- getTraders userAddress
-      ns' <- filterM (fmap (> 0) . balanceOf bn) ns  
-      concat <$> mapM (go bn (k-1)) ns'
+      traders <- getTraders userAddress
+      ns <- filterM (fmap (> 0) . balanceOf bn) traders
+      concat <$> mapM (go bn (k-1)) ns
 ```
 
 ---
@@ -122,6 +122,12 @@ getRichestNeighborsK bn k userAddress = do
 - Use combination of `par` strategies and `async`/`wait`.
 
 Building custom concurrency like this is tedious, fragile, and not always composible.
+
+---
+
+## Good Solutions
+- Don't do anything at all.
+- Let the compiler and libraries work for you.
 
 ---
 
