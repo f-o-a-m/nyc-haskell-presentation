@@ -15,8 +15,3 @@ install:
 
 git: ## Update submodules
 	git submodule init && git submodule update
-
-pandoc: git ## Build the presentation
-	cat 01_eth.md  02_functionality.md 03_functional-tools.md 04_streaming.md 05_data-access.md > index.md
-	pandoc -t revealjs -s --slide-level 2 -o index.html -V theme=$(THEME) -V transition=$(TRANSITION) index.md
-	rm -f index.md
