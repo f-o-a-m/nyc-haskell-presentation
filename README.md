@@ -1,5 +1,11 @@
 ---
 
+# NOTE
+
+You can either view the slides here or as a pdf with `index.pdf`
+
+---
+
 # The State of Haskell in Ethereum
 
 author: Martin Allen, FOAM
