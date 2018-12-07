@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>index</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+</section>
+<section><section id="the-state-of-haskell-in-ethereum" class="title-slide slide level1"><h1>The State of Haskell in Ethereum</h1></section><section class="slide level2">
+
+</section></section>
+<section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="blockchain-vs-cryptocurrency" class="slide level2">
+<h2>Blockchain vs Cryptocurrency</h2>
+<ul>
+<li>Cryptocurrency ~ programmable money
+<ul>
+<li>access control</li>
+<li>utilization</li>
+<li>scarcity</li>
+</ul></li>
+<li>Blockchain ~ ??
+<ul>
+<li>process digital assets</li>
+<li>cryptographic</li>
+<li>distributed</li>
+</ul></li>
+</ul>
+</section><section id="blockchains-in-production" class="slide level2">
+<h2>Blockchains in Production</h2>
+<ul>
+<li>Existing: Bitcoin, Ethereum</li>
+<li>Nascent: Kadena, Cardano SL, RChain</li>
+</ul>
+</section><section id="ethereum-today" class="slide level2">
+<h2>Ethereum Today</h2>
+<ul>
+<li>Only public, permissionless, 2nd generation blockchain in production</li>
+<li>Largest developer community</li>
+<li>Will be here for a while…</li>
+</ul>
+</section><section id="example-applications" class="slide level2">
+<h2>Example Applications</h2>
+<ul>
+<li>Tokenized Assets
+<ul>
+<li>Digital Art – <a href="https://github.com/f-o-a-m/chanterelle-halogen-template">SuperRare</a>, <a href="https://github.com/f-o-a-m/purescript-kitty-monitor">CryptoKitties</a></li>
+<li>Intellectual Property / Licensing</li>
+</ul></li>
+<li>Digital Registries
+<ul>
+<li>Ad Tech – <a href="https://publisher.adchain.com/domains">ad chain</a></li>
+<li>Geospatial Data – <a href="https://beta.foam.space/app">FOAM</a></li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="data-access-and-streaming" class="title-slide slide level1"><h1>Data Access and Streaming</h1></section><section id="the-problem" class="slide level2">
+<h2>The Problem</h2>
+<ul>
+<li>Node’s primary concern is block production, propogation, and verification</li>
+<li>Internal storage model is cryptographic (Merkle) trees</li>
+<li>Query performance not a concern, better to use production grade databases where applicable (e.g. Postgres, Elasticsearch)</li>
+</ul>
+</section><section id="block-model" class="slide level2">
+<h2>Block Model</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="fu">{</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="er">hash</span><span class="fu">:</span> <span class="st">&quot;0xfc31...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="er">number</span><span class="fu">:</span> <span class="dv">5840941</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="er">parentHash</span><span class="fu">:</span> <span class="st">&quot;0x6a4d...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="er">receiptsRoot</span><span class="fu">:</span> <span class="st">&quot;0x17e8...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="er">stateRoot</span><span class="fu">:</span> <span class="st">&quot;0x5d10...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="er">logsBloom</span><span class="fu">:</span> <span class="st">&quot;0x4503...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">  <span class="er">transactionsRoot</span><span class="fu">:</span> <span class="st">&quot;0xe7f0...&quot;</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">  <span class="er">transactions</span><span class="fu">:</span> <span class="ot">[</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">    <span class="st">&quot;0x5465...&quot;</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="st">&quot;0x7ce7...&quot;</span><span class="ot">,</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">    <span class="er">...</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">  <span class="ot">]</span><span class="fu">,</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="er">...</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="fu">}</span></a></code></pre></div>
+<p>Takeaway: Lots of <em>roots</em></p>
+</section><section id="ethereum-progression" class="slide level2">
+<h2>Ethereum Progression</h2>
+Blocks carry an index into a storage tree, called a <em>state root</em>
+<center>
+<img src="images/bc-tree1.png" height="450">
+</center>
+<p>** <sup>Images shamelessly adapted from Git Internals by Scott Chacon</sup></p>
+</section><section id="ethereum-progression-1" class="slide level2">
+<h2>Ethereum Progression</h2>
+Block progression gives a series of indices into storage
+<center>
+<img src="images/bc-tree2.png" height="450">
+</center>
+</section><section id="ethereum-progression-2" class="slide level2">
+<h2>Ethereum Progression</h2>
+<ul>
+<li>want to stream relevant application updates, <em>events</em></li>
+<li>want to access history (e.g. indexing, auditing, replaying)</li>
+<li>want to submit transactions to update this storage
+<center>
+<img src="images/bc-tree3.png" height="450">
+</center></li>
+</ul>
+</section><section id="what-are-these-event-logs-precisely" class="slide level2">
+<h2>What Are These <em>Event Logs</em> Precisely?</h2>
+<ul>
+<li>When Alice transfers Bob a token, balances in contract storage change but this act of exchange is not stored in contract.</li>
+<li>Outside world notified via subscriptions to contract’s transfer topic.</li>
+</ul>
+<center>
+<img src="images/evm-logs.png" height="450">
+</center>
+</section><section class="slide level2">
+
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="functional-tools" class="title-slide slide level1"><h1>Functional Tools</h1></section><section id="core-functional-ethereum-libraries" class="slide level2">
+<h2>Core Functional Ethereum Libraries</h2>
+<ul>
+<li><h3 id="hs-web3">hs-web3</h3></li>
+<li>purescript-web3</li>
+<li>chanterelle</li>
+</ul>
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="high-level-overview" class="title-slide slide level1"><h1>High Level Overview</h1></section><section id="minimal-web3-library-requirements" class="slide level2">
+<h2>Minimal web3 Library Requirements</h2>
+<ul>
+<li>query blockchain metadata (blocks, transactions, etc)</li>
+<li>interact with smart contracts</li>
+<li>stream logs</li>
+</ul>
+</section><section id="interacting-with-smart-contracts" class="slide level2">
+<h2>Interacting with Smart Contracts</h2>
+<ul>
+<li>Ethereum smart contracts expose an interface</li>
+<li>Example: ERC20 standard</li>
+</ul>
+<a href="https://theethereum.wiki/w/index.php/ERC20_Token_Standard"> <img src="images/erc20-abi.png" height="350"> </a>
+</center>
+</section><section id="interacting-with-smart-contracts-abi" class="slide level2">
+<h2>Interacting with Smart Contracts (ABI)</h2>
+<ul>
+<li>Compliation artifact called ABI</li>
+<li>JSON object specifying interface:
+<ul>
+<li>function calls</li>
+<li>events / topics</li>
+</ul></li>
+<li>Straightforward to generate FFI with Template Haskell</li>
+</ul>
+</section><section id="interacting-with-smart-contracts-quasiquoter" class="slide level2">
+<h2>Interacting with Smart Contracts (QuasiQuoter)</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb2-1" data-line-number="1">[abiFrom|&quot;.abis/ERC20.json&quot;]</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">...</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">-- | Transfer a quantity of tokens to an address.  </span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="ot">transfer ::</span> <span class="dt">Call</span> <span class="ot">-&gt;</span> <span class="dt">Address</span> <span class="ot">-&gt;</span> <span class="dt">UIntN</span> <span class="dv">256</span> <span class="ot">-&gt;</span> <span class="dt">Web3</span> <span class="dt">Hash</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">-- | Represents a &#39;Transfer&#39; event log.</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">data</span> <span class="dt">Transfer</span> <span class="fu">=</span> </a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">  <span class="dt">Transfer</span> {<span class="ot"> transferFrom ::</span> <span class="dt">Address</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">           ,<span class="ot"> transferTo ::</span> <span class="dt">Address</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">           ,<span class="ot"> transferValue ::</span> <span class="dt">UIntN</span> <span class="dv">256</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">           } <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>, <span class="dt">Ord</span>, <span class="dt">Generic</span>)</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="fu">...</span></a></code></pre></div>
+</section><section id="interacting-with-smart-contracts-encodings" class="slide level2">
+<h2>Interacting with Smart Contracts (Encodings)</h2>
+<ul>
+<li>Ethereum has its own encoding schema (ABI)
+<ul>
+<li>transactions are serialized closures</li>
+<li>events / topics</li>
+</ul></li>
+<li>codecs derived generically (<code>generics-sop</code>)</li>
+<li>instances declared in QQ</li>
+</ul>
+</section><section class="slide level2">
+
+<h4 id="conclusion">Conclusion:</h4>
+<p>All datatypes and FFI needed to interact with <em>any</em> Smart Contract can be generated from the QuasiQuoter and used natively in any application.</p>
+</section><section class="slide level2">
+
+<center>
+</section><section id="what-does-it-look-like" class="slide level2">
+<h2>What does it look like?</h2>
+<a href="https://raw.githubusercontent.com/f-o-a-m/recurse-presentation/master/images/foam-architecture.png"> <img src="images/foam-architecture.png" height="450"> </a>
+</center>
+</section></section>
+<section><section id="streaming-logs" class="title-slide slide level1"><h1>Streaming Logs</h1></section><section id="machines---ceci-nest-pas-une-pipe" class="slide level2">
+<h2>Machines - <em>Ceci n’est pas une pipe</em></h2>
+<ul>
+<li>similar libraries:
+<ul>
+<li><em>conduit</em></li>
+<li><em>purescript-coroutines</em></li>
+<li><em>pipes</em></li>
+</ul></li>
+<li>Idea: build up data processing machines<sup>1</sup>, compose them, join them, split them.</li>
+<li>Useful for cases when streaming from one IO source to another with intermediate processing phases.</li>
+</ul>
+<p><sub>1. Usually build something called a <em>Plan</em>, which is a DSL describing what the machine should do and how to terminate.</sub></p>
+</section><section id="filter-type-description" class="slide level2">
+<h2>Filter Type Description</h2>
+<p>We send out a description of what we want to monitor.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">-- | Filter has a phantom type for the specific event.</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">data</span> <span class="dt">Filter</span> e <span class="fu">=</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">Filter</span> {<span class="ot"> address   ::</span> [<span class="dt">Address</span>]</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">         <span class="co">-- ^ contract addresses for event origin.</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">         ,<span class="ot"> fromBlock ::</span> <span class="dt">ChainCursor</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">         ,<span class="ot"> toBlock   ::</span> <span class="dt">ChainCursor</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">         ,<span class="ot"> topics    ::</span> [<span class="dt">Maybe</span> <span class="dt">ByteString</span>]</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">         <span class="co">-- ^ Bloom filter to narrow this event filter.</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">         }         </a></code></pre></div>
+<p>Each match that comes back looks like this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">data</span> <span class="dt">FilterChange</span> e <span class="fu">=</span> </a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  <span class="dt">FilterChange</span> {<span class="ot"> rawChange ::</span> <span class="dt">Change</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">               <span class="co">-- ^ event metadata (e.g. tx hash)</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">               ,<span class="ot"> event     ::</span> e</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">               <span class="co">-- ^ particular event (e.g. Transfer)</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">               }</a></code></pre></div>
+</section><section id="filter-machines-slightly-simplified" class="slide level2">
+<h2>Filter Machines (slightly simplified)</h2>
+<p>There’s an internal distinction between folding over past blocks and subscribing to current events.</p>
+<p>Folding over past events:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co">-- | Take a filter and split it into smaller intervals.</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">filterStream </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="ot">  ::</span> <span class="dt">FilterStreamState</span> e</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="ot">-&gt;</span> <span class="dt">MachineT</span> <span class="dt">Web3</span> k (<span class="dt">Filter</span> e)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">-- | Stream past events until you are caught up to </span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">-- | ChainHead or the end of the filter&#39;s interval.</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8">playLogs </a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="ot">  ::</span> <span class="dt">DecodeEvent</span> i ni e</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">  <span class="ot">=&gt;</span> <span class="dt">FilterStreamState</span> e</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">  <span class="ot">-&gt;</span> <span class="dt">MachineT</span> <span class="dt">Web3</span> k [<span class="dt">FilterChange</span> e]</a></code></pre></div>
+<p><sub> Weirdly, all of these machines are polymorphic in <code>k</code> </sub></p>
+</section><section id="filter-machines-slightly-simplified-1" class="slide level2">
+<h2>Filter Machines (slightly simplified)</h2>
+<p>Subscribing to current events:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co">-- | Poll the filter until a given block number</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">-- | TODO: support websockets</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">pollFilter </a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="ot">  ::</span> forall i ni e k <span class="fu">.</span> </a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">     <span class="dt">DecodeEvent</span> i ni e</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="ot">=&gt;</span> <span class="dt">Filter</span> e</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="ot">-&gt;</span> <span class="dt">MachineT</span> <span class="dt">Web3</span> k [<span class="dt">FilterChange</span> e]</a></code></pre></div>
+<p>Running a machine:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">data</span> <span class="dt">EventAction</span> <span class="fu">=</span> <span class="dt">Continue</span> <span class="fu">|</span> <span class="dt">Terminate</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">-- | run while &#39;mapM_&#39;ing with the given handler.</span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">reduceEventStream </a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="ot">  ::</span> <span class="dt">Monad</span> m</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">  <span class="ot">=&gt;</span> <span class="dt">MachineT</span> m k [<span class="dt">FilterChange</span> e]</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">  <span class="ot">-&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">ReaderT</span> <span class="dt">Change</span> m <span class="dt">EventAction</span>)</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">  <span class="ot">-&gt;</span> m (<span class="dt">Maybe</span> (<span class="dt">EventAction</span>, <span class="dt">BlockNumber</span>))</a></code></pre></div>
+</section><section id="high-level-functions" class="slide level2">
+<h2>High level functions</h2>
+<p>There are also high level functions that take care of all the machines logic for you.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co">-- | Subscribe to the given filter, processing a number</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">-- | of blocks at a time with the handler until </span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">-- | possibly transitioning to polling.</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">eventMany </a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="ot">  ::</span> <span class="dt">DecodeEvent</span> i ni e</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">  <span class="ot">=&gt;</span> <span class="dt">Filter</span> e</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  <span class="ot">-&gt;</span> <span class="dt">Int</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="ot">-&gt;</span> (e <span class="ot">-&gt;</span> <span class="dt">ReaderT</span> <span class="dt">Change</span> <span class="dt">Web3</span> <span class="dt">EventAction</span>)</a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">  <span class="ot">-&gt;</span> <span class="dt">Web3</span> ()</a></code></pre></div>
+<p>Ironically, I usually use this to feed a <code>Conduit</code> in all the data processing work that I do.</p>
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="querying-data" class="title-slide slide level1"><h1>Querying Data</h1></section><section id="haxl-interlude" class="slide level2">
+<h2>Haxl Interlude</h2>
+<center>
+<img src="images/free-dsl.png" height="450" width="350">
+</center>
+</section><section id="what-is-haxl" class="slide level2">
+<h2>What is Haxl?</h2>
+<ul>
+<li>Originally developed at Facebook, led by Simon Marlow</li>
+<li>Kind of like a scheduler for monadic computation
+<ul>
+<li>input “sequential”, IO bound, monadic computation</li>
+<li>will optimally<sup>1</sup> rewrite to parallalelize</li>
+<li>sophisticated caching</li>
+</ul></li>
+<li>Really great for time indexed databases where you really don’t want to do more work than you have to.</li>
+</ul>
+<p><sub>[1] Not actually optimal (couldn’t be), uses heuristics to avoid slow compile times</sub></p>
+</section><section id="example-computation" class="slide level2">
+<h2>Example Computation</h2>
+<p>Suppose we have these functions:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="co">-- | Core logic generated by QuasiQuoter, </span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">--   queries web3 api.</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3">balanceOf </a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="ot">  ::</span> <span class="dt">MonadWeb3</span> m</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">  <span class="ot">=&gt;</span> <span class="dt">BlockNumber</span> </a>
+<a class="sourceLine" id="cb10-6" data-line-number="6">  <span class="ot">-&gt;</span> <span class="dt">Address</span> </a>
+<a class="sourceLine" id="cb10-7" data-line-number="7">  <span class="ot">-&gt;</span> m (<span class="dt">UIntN</span> <span class="dv">256</span>)</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="fu">...</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9">  </a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">-- | Uses our stored history of all token transfers.</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11">getTraders</a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="ot">  ::</span> <span class="dt">MonadPg</span> m</a>
+<a class="sourceLine" id="cb10-13" data-line-number="13">  <span class="ot">=&gt;</span> <span class="dt">BlockNumber</span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14">  <span class="ot">-&gt;</span> <span class="dt">Address</span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15">  <span class="ot">-&gt;</span> m [<span class="dt">Address</span>]</a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="fu">...</span></a></code></pre></div>
+</section><section id="example-computation-continued" class="slide level2">
+<h2>Example Computation (<em>continued</em>)</h2>
+<p>Let <strong>Neighbor</strong> be a relations with <strong>Neighbor(A,B)</strong> if address A has traded with address B, where B currently has nonzero token balance.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co">-- | Gets the 10 Neighbors with the highest token </span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="co">--   balances</span></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">getRichestNeighbors</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="ot">  ::</span> ( <span class="dt">MonadWeb3</span> m</a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">     , <span class="dt">MonadPg</span> m</a>
+<a class="sourceLine" id="cb11-6" data-line-number="6">     )</a>
+<a class="sourceLine" id="cb11-7" data-line-number="7">  <span class="ot">=&gt;</span> <span class="dt">BlockNumber</span></a>
+<a class="sourceLine" id="cb11-8" data-line-number="8">  <span class="ot">-&gt;</span> <span class="dt">Address</span></a>
+<a class="sourceLine" id="cb11-9" data-line-number="9">  <span class="ot">-&gt;</span> m [(<span class="dt">Address</span>, <span class="dt">UIntN</span> <span class="dv">256</span>)]</a>
+<a class="sourceLine" id="cb11-10" data-line-number="10">getRichestNeighbors userAddress <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb11-11" data-line-number="11">  traders <span class="ot">&lt;-</span> getTraders userAddress</a>
+<a class="sourceLine" id="cb11-12" data-line-number="12">  pairs <span class="ot">&lt;-</span> forM traders <span class="fu">$</span> \trader <span class="ot">-&gt;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb11-13" data-line-number="13">    bal <span class="ot">&lt;-</span> balanceOf bn trader</a>
+<a class="sourceLine" id="cb11-14" data-line-number="14">    pure (trader, bal)</a>
+<a class="sourceLine" id="cb11-15" data-line-number="15">  <span class="kw">let</span> pairs&#39; <span class="fu">=</span> filter ((<span class="fu">&gt;</span> <span class="dv">0</span>) <span class="fu">.</span> snd) pairs</a>
+<a class="sourceLine" id="cb11-16" data-line-number="16">  pure <span class="fu">.</span> take <span class="dv">10</span> <span class="fu">.</span> sortOn (snd <span class="fu">.</span> <span class="dt">Down</span>) <span class="fu">$</span> pairs&#39;</a></code></pre></div>
+</section><section id="example-computation-continued-1" class="slide level2">
+<h2>Example Computation (<em>continued</em>)</h2>
+<p>Introduce another parameter <code>k</code> with <strong>NeighborK(A, B, k)</strong> if there exists A<sub>1</sub> …, A<sub>i-1</sub> with <code>i &lt;= k</code> and <strong>Neighbor(A, A<sub>1</sub>)</strong> … <strong>Neighbor(A<sub>i-1</sub>, B)</strong>.</p>
+</section><section id="example-computation-naive-approach" class="slide level2">
+<h2>Example Computation: Naive Approach</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb12-1" data-line-number="1">getRichestNeighborsK</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="ot">  ::</span> (<span class="dt">MonadWeb3</span> m, <span class="dt">MonadPg</span> m)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">  <span class="ot">=&gt;</span> <span class="dt">BlockNumber</span></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">  <span class="ot">-&gt;</span> <span class="dt">Int</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">  <span class="ot">-&gt;</span> <span class="dt">Address</span></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="ot">-&gt;</span> m [(<span class="dt">Address</span>, <span class="dt">UIntN</span> <span class="dv">256</span>)]</a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">getRichestNeighborsK bn k userAddress <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb12-8" data-line-number="8">  neighbors <span class="ot">&lt;-</span> go bn k userAddress</a>
+<a class="sourceLine" id="cb12-9" data-line-number="9">  pairs <span class="ot">&lt;-</span> forM neighbors <span class="fu">$</span> \n <span class="ot">-&gt;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10">    bal <span class="ot">&lt;-</span> balanceOf bn n</a>
+<a class="sourceLine" id="cb12-11" data-line-number="11">    pure (n, bal)</a>
+<a class="sourceLine" id="cb12-12" data-line-number="12">  pure <span class="fu">.</span> take <span class="dv">10</span> <span class="fu">.</span> sortOn (snd <span class="fu">.</span> <span class="dt">Down</span>) <span class="fu">$</span> pairs </a>
+<a class="sourceLine" id="cb12-13" data-line-number="13">  <span class="kw">where</span></a>
+<a class="sourceLine" id="cb12-14" data-line-number="14">    go _ <span class="dv">0</span> _ <span class="fu">=</span> pure []</a>
+<a class="sourceLine" id="cb12-15" data-line-number="15">    go bn k userAddress <span class="fu">=</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb12-16" data-line-number="16">      traders <span class="ot">&lt;-</span> getTraders userAddress</a>
+<a class="sourceLine" id="cb12-17" data-line-number="17">      ns <span class="ot">&lt;-</span> filterM (fmap (<span class="fu">&gt;</span> <span class="dv">0</span>) <span class="fu">.</span> balanceOf bn) traders</a>
+<a class="sourceLine" id="cb12-18" data-line-number="18">      concat <span class="fu">&lt;$&gt;</span> mapM (go bn (k<span class="fu">-</span><span class="dv">1</span>)) ns</a></code></pre></div>
+</section><section id="example-computation-problems" class="slide level2">
+<h2>Example Computation: Problems</h2>
+<ul>
+<li>calls <code>balanceOf</code> <em>at least</em> twice for each address.</li>
+<li><code>getTraders</code> is possibly called multiple times per address.</li>
+<li>any time we used <code>mapM</code> (equivalently <code>forM</code>), we could be concurrently running each operation.</li>
+</ul>
+</section><section id="bad-solutions" class="slide level2">
+<h2>Bad Solutions</h2>
+<ul>
+<li>Run computation in <code>State</code> monad holding <code>MVar</code> with maps
+<ul>
+<li><code>traders :: Map Address [Address]</code></li>
+<li><code>balances :: Map Address (UIntN 256)</code></li>
+</ul></li>
+<li>Use combination of <code>par</code> strategies and <code>async</code>/<code>wait</code>.</li>
+</ul>
+<p>Building custom concurrency like this is tedious, fragile, and not always composible.</p>
+</section><section id="good-solutions" class="slide level2">
+<h2>Good Solutions</h2>
+<ul>
+<li>Don’t do anything at all.</li>
+<li>Let the compiler and libraries work for you.</li>
+</ul>
+</section><section id="haxl-solution" class="slide level2">
+<h2>Haxl Solution</h2>
+<p>The analogy is: - <code>Memory Management</code> is to <code>Garbage Collection</code> as <code>Concurrency</code> is to <code>Haxl</code><sup>1</sup></p>
+<p>You might be able to do better with custom concurrency controls, but unlikely. Also, it’s probably not the actual problem you’re trying to solve at the moment.</p>
+<p><sub>[1] Simon Marlow <a href="https://www.youtube.com/watch?v=sT6VJkkhy0o">StrangeLoop 2017</a> </sub></p>
+</section><section id="haxl-scheduler-diagram" class="slide level2">
+<h2>Haxl Scheduler Diagram</h2>
+<p>Not an AST! This represents a dependency graph where sequential dependencies are marked with <code>(&gt;&gt;=)</code> and syncrhonization points with <code>(&lt;*&gt;)</code>.</p>
+<p><img src="images/haxl.png" height="450"></p>
+</section><section class="slide level2">
+
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
